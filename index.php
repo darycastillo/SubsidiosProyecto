@@ -1,3 +1,13 @@
+<?php
+session_start();//inicia sesion
+//include 'Funciones/sesiones.php';//se hace uso de las funciones
+if(isset($_GET['cerrar_sesion'])) {
+    $_SESSION = array();
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/my-login.css">
 </head>
+
 <body class="my-login-page">
 	<section class="h-100">
 		<div class="container h-100">
@@ -19,16 +30,15 @@
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Login</h4>
-							<form method="POST">
+							<form method="POST" action="Funciones/autenticar.php">
 							 
 								<div class="form-group">
-									<label for="usuario">E-Mail Address</label>
-
-									<input id="usuario" type="email" class="form-control" name="usuario" value="" required autofocus>
+									<label for="usuario">Direccion de Correo</label>
+									<input id="usuario" type="text" class="form-control" name="usuario" value="" required autofocus>
 								</div>
 
 								<div class="form-group">
-									<label for="password">Password
+									<label for="password">Contraseña
 																			</label>
 									<input id="password" type="password" class="form-control" name="password" required data-eye>
 								</div>
@@ -56,8 +66,8 @@
 		</div>
 	</section>
 
-	<script src="js/jquery.min.js"></script>
+	<!--<script src="js/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<script src="js/my-login.js"></script>
+	<script src="js/my-login.js"></script>-->
 </body>
 </html>
