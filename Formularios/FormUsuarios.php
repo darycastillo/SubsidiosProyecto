@@ -2,7 +2,6 @@
 ?>
 
 <div class="">
-
     <div class="">
     <form class="form-horizontal center-block">
         <div class="form-group">

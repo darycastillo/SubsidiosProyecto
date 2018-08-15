@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../Vistas/Administrador.php">Administrador</a>
+                <a class="navbar-brand" href="../Vistas/Usuarios.php">Usuario</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -116,13 +116,13 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="">
-                        <a href="../Vistas/Administrador.php"><i class="fa fa-fw fa-user"></i> Agregar Usuarios</a>
+                        <a href="../Vistas/Usuarios.php"><i class="fa fa-fw fa-home"></i>Proyectos</a>
                     </li>
                     <li class="">
-                        <a href="../Vistas/AgregarDepartamentos.php"><i class="fa fa-fw fa-map-marker"></i>Agregar Departamentos</a>
+                        <a href="../Vistas/AgregarDepartamentos.php"><i class="fa fa-fw fa-map-marker"></i>Palaca</a>
                     </li>
                     <li>
-                        <a href="../Vistas/AgregarMunicipios.php"><i class="fa fa-fw fa-map-marker"></i> Agregar Municipios</a>
+                        <a href="../Vistas/AgregarMunicipios.php"><i class="fa fa-fw fa-map-marker"></i>palaca</a>
                     </li>
                 </ul>
             </div>

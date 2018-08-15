@@ -33,7 +33,7 @@
         <!-- Navigation -->
 
         <?php
-                include('../ArchivoEstáticos/NavBar.php');
+                include('../ArchivoEstáticos/NavBarU.php');
         ?>
 
 
@@ -48,7 +48,7 @@
                             <center SUBSIDIOS <small>INGRESE LOS DATOS</small> </center>
                         </h1>
                         <?php
-                        include('../Formularios/FormUsuarios.php');
+                        include('../Formularios/FormProyectos.php');
                         ?>
 
                     </div>
