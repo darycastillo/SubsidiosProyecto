@@ -1,9 +1,12 @@
+<?php
+include '../Funciones/sesiones.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/html">
 <body style="background-color:#A4A4A4;">
 </body>
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +29,7 @@
 
  </head>
 
-<body>
+    <body>
 
     <div id="wrapper">
 
