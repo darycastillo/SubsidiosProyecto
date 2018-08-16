@@ -107,7 +107,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="../index.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -119,10 +119,10 @@
                         <a href="../Vistas/Usuarios.php"><i class="fa fa-fw fa-home"></i>Proyectos</a>
                     </li>
                     <li class="">
-                        <a href="../Vistas/AgregarDepartamentos.php"><i class="fa fa-fw fa-map-marker"></i>Palaca</a>
+                        <a href="../Vistas/PersonasInvolucradas.php"><i class="fa fa-fw fa-user"></i>Personas Involucradas</a>
                     </li>
                     <li>
-                        <a href="../Vistas/AgregarMunicipios.php"><i class="fa fa-fw fa-map-marker"></i>palaca</a>
+                        <a href="../Vistas/Expediente.php"><i class="fa fa-fw fa-folder"></i>Expedientes</a>
                     </li>
                 </ul>
             </div>
