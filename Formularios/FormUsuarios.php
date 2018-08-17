@@ -1,9 +1,10 @@
 <?php
+include ("../FuncionesBD/llenarselect.php");
 ?>
 
 <div class="">
     <div class="">
-    <form class="form-horizontal center-block">
+    <form class="form-horizontal center-block" action="../inserciones/tb_informacion_usuarios.php" method="post">
         <div class="form-group">
             <label for="nombre1" class="control-label col-xs-2">Nombre 1</label>
             <div class="col-xs-8">
@@ -41,7 +42,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="nombre1" class="control-label col-xs-2">Correo Electronico</label>
+            <label for="correo1" class="control-label col-xs-2">Correo Electronico</label>
             <div class="col-xs-8">
                 <div class="input-group">
                     <div class="input-group-addon">
@@ -61,8 +62,10 @@
             <label for="genero" class="control-label col-xs-2">Genero</label>
             <div class="col-xs-2">
                 <select id="genero" name="genero" required="required" class="select form-control">
-                    <option value="M">Masculino</option>
-                    <option value="F">Femenino</option>
+               <option value="0"> Seleccione</option>
+                    <?php
+                    new llenarselect('tb_generos','ID_GENERO','DESCRIPCION_GENERO');
+                    ?>
                 </select>
             </div>
         </div>
@@ -83,10 +86,11 @@
             <div class="form-group">
                 <label for="roluser" class="control-label col-xs-2">Rol de Usuario</label>
                 <div class="col-xs-2">
-                    <select id="roluser" name="roluser" class="select form-control" required="required">
-                        <option value="rabbit">Rol1</option>
-                        <option value="duck">Rol2</option>
-                        <option value="fish">Rol3</option>
+                    <select id="roluser" name="roluser" required="required" class="select form-control">
+                        <option value="0"> Seleccione</option>
+                        <?php
+                        new llenarselect('tb_roles','ID_ROL','DESCRIPCION_CORTA');
+                        ?>
                     </select>
                 </div>
             </div>
@@ -94,12 +98,26 @@
                 <label for="unidadtrabajo" class="control-label col-xs-2">Unidad de Trabajo</label>
                 <div class="col-xs-2">
                     <select id="unidadtrabajo" name="unidadtrabajo" class="select form-control" required="required">
-                        <option value="rabbit">Departamento1</option>
-                        <option value="duck">Departamento2</option>
-                        <option value="fish">Departamento3</option>
+                        <option value="0"> Seleccione</option>
+                        <?php
+                        new llenarselect('tb_unidad_trabajo','ID_UNIDAD_TRABAJO','DESCRIPCION_UNIDAD');
+                        ?>
                     </select>
                 </div>
             </div>
+
+            <div class="form-group">
+                <label for="estatus" class="control-label col-xs-2">Estatus</label>
+                <div class="col-xs-2">
+                    <select id="estatus" name="estatus" class="select form-control" required="required">
+                        <option value="0"> Seleccione</option>
+                        <option value="1"> Activo</option>
+                        <option value="2"> Inactivo</option>
+
+                    </select>
+                </div>
+            </div>
+
         <div class="form-group row">
             <div class="col-xs-offset-2 col-xs-8">
                 <button name="submit" type="submit" class="btn btn-primary">Aceptar</button>

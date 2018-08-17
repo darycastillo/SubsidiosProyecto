@@ -1,3 +1,6 @@
+<?php
+include '../Autenticacion/sesiones.php';
+?>
 <!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/html">
 <body style="background-color:#A4A4A4;">

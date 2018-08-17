@@ -1,5 +1,5 @@
 <?php
-include '../Funciones/sesiones.php';
+include '../Autenticacion/sesiones.php';
 ?>
 
 

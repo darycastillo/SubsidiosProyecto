@@ -6,12 +6,13 @@ include 'conexionBD.php';
 
 try {
     // Seleccionar los datos de usuario
-    $stmt = $conn->prepare("SELECT usuario, id, password FROM usuarios WHERE usuario = ?");
+    $stmt = $conn->prepare("SELECT NOMBRE_USUARIO, ID_USUARIO, CLAVE, ID_ROL FROM tb_usuarios WHERE NOMBRE_USUARIO = ?");
     $stmt->bind_param('s', $usuario);
     $stmt->execute();
 
+
     // Loguear el usuario
-    $stmt->bind_result($nombre_usuario, $id_usuario, $pass_usuario);
+    $stmt->bind_result($nombre_usuario, $id_usuario, $pass_usuario,$Rol);
     $stmt->fetch();
     if($nombre_usuario){
         // El usuario existe, verificar el password
@@ -21,13 +22,27 @@ try {
             $_SESSION['nombre'] = $usuario;
             $_SESSION['id'] = $id_usuario;
             $_SESSION['login'] = true;
-            // Login correcto
+            //$_SESSION['rol']=$Rol;
+           /* // Login correcto
             $respuesta = array(
                 'respuesta' => 'correcto',
                 'nombre' => $nombre_usuario,
-//                'tipo' => $accion
-            );
-            header('Location: ../Vistas/AgregarUsuarios.php');
+                'rol'=>$Rol
+            );*/
+
+            //se redirecciona segun el rol
+            switch ($Rol) {
+                case 1:
+                    header('Location: ../Vistas/Administrador.php');
+                    break;
+                case 2:
+                    header('Location: ../Vistas/Usuarios.php');
+                    break;
+                default :
+                    break;
+            }
+
+
         } else {
             // Login incorrecto, enviar error
             $respuesta = array(

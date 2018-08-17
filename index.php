@@ -1,11 +1,9 @@
 <?php
 session_start();//inicia sesion
-//include 'Funciones/sesiones.php';//se hace uso de las funciones
 if(isset($_GET['cerrar_sesion'])) {
     $_SESSION = array();
 }
 ?>
-
 
 
 <!DOCTYPE html>
@@ -30,7 +28,7 @@ if(isset($_GET['cerrar_sesion'])) {
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Login</h4>
-							<form method="POST" action="Funciones/autenticar.php">
+							<form method="POST" action="Autenticacion/autenticar.php">
 							 
 								<div class="form-group">
 									<label for="usuario">Direccion de Correo</label>
